@@ -62,7 +62,7 @@ function PosterCard({ item }) {
                 <h3>{getTitle(item)}</h3>
                 <p>
                     {getType(item)}
-                    {getYear(item) ? ` • ${getYear(item)}` : ""}
+                    {getYear(item) ? ` â€¢ ${getYear(item)}` : ""}
                 </p>
             </div>
         </Link>
