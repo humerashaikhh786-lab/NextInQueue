@@ -1,0 +1,56 @@
+# ===============================
+# Backup / temporary files
+# ===============================
+**/*.bak
+**/*.backup
+**/*.before-*
+**/*.selector-backup
+**/*.watchnow-backup
+
+# ===============================
+# Generated / temporary files
+# ===============================
+server/server.zip
+server/spring-error.txt
+# ===============================
+# Environment / Secrets
+# ===============================
+.env
+.env.*
+!.env.example
+
+# Spring sensitive configuration
+server/src/main/resources/application.properties
+
+# ===============================
+# Build output
+# ===============================
+**/target/
+**/build/
+**/out/
+
+# ===============================
+# Node
+# ===============================
+**/node_modules/
+**/dist/
+**/dist-ssr/
+
+# ===============================
+# IDE / OS
+# ===============================
+.vscode/
+.idea/
+*.iml
+.DS_Store
+
+# ===============================
+# Project backups
+# ===============================
+client_BACKUP_BEFORE_FIXES/
+
+# ===============================
+# Logs
+# ===============================
+*.log
+**/*.clean-backup

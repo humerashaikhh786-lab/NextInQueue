@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #0a0e14;
+  color: #f5f7fa;
+
+  line-height: 1.5;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: #3f7cff;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0e14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #303846;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #465267;
+}/* =========================================
+   NEXTINQUEUE GLOBAL THEME LAYER
+   ========================================= */
+
+html[data-nextinqueue-theme] {
+  --nq-accent: #f42d50;
+  --nq-accent-soft: rgba(244, 45, 80, 0.15);
+  --nq-accent-border: rgba(244, 45, 80, 0.38);
+}
+
+html[data-nextinqueue-theme="light"] {
+  --nq-accent: #3f7cff;
+  --nq-accent-soft: rgba(63, 124, 255, 0.12);
+  --nq-accent-border: rgba(63, 124, 255, 0.34);
+}
+
+html[data-nextinqueue-theme="navy"] {
+  --nq-accent: #69a9ff;
+  --nq-accent-soft: rgba(105, 169, 255, 0.14);
+  --nq-accent-border: rgba(105, 169, 255, 0.36);
+}
+
+html[data-nextinqueue-theme="blue"] {
+  --nq-accent: #57a8ff;
+  --nq-accent-soft: rgba(87, 168, 255, 0.14);
+  --nq-accent-border: rgba(87, 168, 255, 0.36);
+}
+
+html[data-nextinqueue-theme="purple"] {
+  --nq-accent: #b66cff;
+  --nq-accent-soft: rgba(182, 108, 255, 0.14);
+  --nq-accent-border: rgba(182, 108, 255, 0.36);
+}
+
+html[data-nextinqueue-theme="emerald"] {
+  --nq-accent: #38d39f;
+  --nq-accent-soft: rgba(56, 211, 159, 0.14);
+  --nq-accent-border: rgba(56, 211, 159, 0.36);
+}
+
+html[data-nextinqueue-theme="sunset"] {
+  --nq-accent: #ff8a4d;
+  --nq-accent-soft: rgba(255, 138, 77, 0.14);
+  --nq-accent-border: rgba(255, 138, 77, 0.36);
+}
+
+html[data-nextinqueue-theme="rose"] {
+  --nq-accent: #ff5d89;
+  --nq-accent-soft: rgba(255, 93, 137, 0.14);
+  --nq-accent-border: rgba(255, 93, 137, 0.36);
+}
+
+html[data-nextinqueue-theme="monochrome"] {
+  --nq-accent: #e6e6e6;
+  --nq-accent-soft: rgba(230, 230, 230, 0.12);
+  --nq-accent-border: rgba(230, 230, 230, 0.30);
+}
+
+html[data-nextinqueue-theme="crimson"] {
+  --nq-accent: #f05068;
+  --nq-accent-soft: rgba(240, 80, 104, 0.14);
+  --nq-accent-border: rgba(240, 80, 104, 0.36);
+}
+
+html[data-nextinqueue-theme="ocean"] {
+  --nq-accent: #41b9df;
+  --nq-accent-soft: rgba(65, 185, 223, 0.14);
+  --nq-accent-border: rgba(65, 185, 223, 0.36);
+}
+
+html[data-nextinqueue-theme="aurora"] {
+  --nq-accent: #61e0c1;
+  --nq-accent-soft: rgba(97, 224, 193, 0.14);
+  --nq-accent-border: rgba(97, 224, 193, 0.36);
+}
+
+html[data-nextinqueue-theme="teal"] {
+  --nq-accent: #38d8cc;
+  --nq-accent-soft: rgba(56, 216, 204, 0.14);
+  --nq-accent-border: rgba(56, 216, 204, 0.36);
+}
+
+html[data-nextinqueue-theme="forest"] {
+  --nq-accent: #51c985;
+  --nq-accent-soft: rgba(81, 201, 133, 0.14);
+  --nq-accent-border: rgba(81, 201, 133, 0.36);
+}
+
+html[data-nextinqueue-theme="amber"] {
+  --nq-accent: #ffc857;
+  --nq-accent-soft: rgba(255, 200, 87, 0.14);
+  --nq-accent-border: rgba(255, 200, 87, 0.36);
+}
+
+html[data-nextinqueue-theme="violet"] {
+  --nq-accent: #9a7cff;
+  --nq-accent-soft: rgba(154, 124, 255, 0.14);
+  --nq-accent-border: rgba(154, 124, 255, 0.36);
+}
+
+html[data-nextinqueue-theme="graphite"] {
+  --nq-accent: #9fa8b5;
+  --nq-accent-soft: rgba(159, 168, 181, 0.12);
+  --nq-accent-border: rgba(159, 168, 181, 0.30);
+}
+
+html[data-nextinqueue-theme="mint"] {
+  --nq-accent: #6ce0be;
+  --nq-accent-soft: rgba(108, 224, 190, 0.14);
+  --nq-accent-border: rgba(108, 224, 190, 0.36);
+}
+
+html[data-nextinqueue-theme="coral"] {
+  --nq-accent: #ff786b;
+  --nq-accent-soft: rgba(255, 120, 107, 0.14);
+  --nq-accent-border: rgba(255, 120, 107, 0.36);
+}
+
+html[data-nextinqueue-theme="indigo"] {
+  --nq-accent: #7486ff;
+  --nq-accent-soft: rgba(116, 134, 255, 0.14);
+  --nq-accent-border: rgba(116, 134, 255, 0.36);
+}
+
+html[data-nextinqueue-theme] body,
+html[data-nextinqueue-theme] #root {
+  background: var(--nq-bg) !important;
+  color: var(--nq-text) !important;
+}
+
+html[data-nextinqueue-theme] .app-content,
+html[data-nextinqueue-theme] main,
+html[data-nextinqueue-theme] .page-container {
+  background: var(--nq-bg) !important;
+  color: var(--nq-text) !important;
+}
+
+html[data-nextinqueue-theme] nav {
+  background: var(--nq-panel) !important;
+  color: var(--nq-text) !important;
+  border-color: var(--nq-border) !important;
+}
+
+html[data-nextinqueue-theme] [class*="-card"],
+html[data-nextinqueue-theme] [class*="-panel"],
+html[data-nextinqueue-theme] .content-card {
+  background: var(--nq-panel) !important;
+  color: var(--nq-text) !important;
+  border-color: var(--nq-border) !important;
+}
+
+html[data-nextinqueue-theme] input,
+html[data-nextinqueue-theme] textarea,
+html[data-nextinqueue-theme] select {
+  background: var(--nq-input) !important;
+  color: var(--nq-text) !important;
+  border-color: var(--nq-border) !important;
+}
+
+html[data-nextinqueue-theme] dialog,
+html[data-nextinqueue-theme] [role="dialog"] {
+  background: var(--nq-panel) !important;
+  color: var(--nq-text) !important;
+  border-color: var(--nq-border) !important;
+}
+
+html[data-nextinqueue-theme] .primary-button,
+html[data-nextinqueue-theme] .settings-action-button,
+html[data-nextinqueue-theme] .theme-save-button {
+  background: var(--nq-accent) !important;
+  border-color: var(--nq-accent) !important;
+  color: #ffffff !important;
+}
+
+html[data-nextinqueue-theme] .section-label {
+  color: var(--nq-accent) !important;
+}
+
+html[data-nextinqueue-theme] .back-button {
+  background: var(--nq-panel) !important;
+  color: var(--nq-text) !important;
+  border-color: var(--nq-border) !important;
+}
+
+html[data-nextinqueue-theme] ::selection {
+  background: var(--nq-accent) !important;
+  color: #ffffff !important;
+}
+
+html[data-nextinqueue-theme] ::-webkit-scrollbar-track {
+  background: var(--nq-bg);
+}
+
+html[data-nextinqueue-theme] ::-webkit-scrollbar-thumb {
+  background: var(--nq-accent-border);
+}
+
+html[data-nextinqueue-theme] ::-webkit-scrollbar-thumb:hover {
+  background: var(--nq-accent);
+}

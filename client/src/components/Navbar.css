@@ -1,0 +1,396 @@
+.nq-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0 34px;
+    background: rgba(7, 9, 15, 0.82);
+    border-bottom: 1px solid rgba(255,255,255,0.055);
+    backdrop-filter: blur(20px);
+}
+
+.nq-logo {
+    color: #f2f4f9;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: -0.7px;
+    white-space: nowrap;
+}
+
+.nq-logo span {
+    color: #8ca3ff;
+}
+
+.nq-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex: 1;
+}
+
+.nq-nav a {
+    position: relative;
+    color: #747e91;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.nq-nav a:hover {
+    color: #e5e9f2;
+}
+
+.nq-nav a.active {
+    color: #f2f4fa;
+}
+
+.nq-nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    background: #91a6ff;
+    box-shadow: 0 0 10px rgba(145,166,255,0.8);
+}
+
+.nq-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.nq-search-button,
+.nq-profile-button,
+.nq-login-button {
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+}
+
+.nq-search-button {
+    width: 38px;
+    height: 38px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: transparent;
+    color: #8c96a9;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.nq-search-button:hover,
+.nq-search-button.active {
+    color: #dbe2ff;
+    background: rgba(255,255,255,0.06);
+}
+
+.nq-profile-button {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#718cff,#8c6bdb);
+    color: white;
+    font-size: 11px;
+    font-weight: 850;
+}
+
+.nq-login-button {
+    height: 34px;
+    padding: 0 14px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.06);
+    color: #c8cfdd;
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.nq-navbar-search {
+    position: absolute;
+    top: 65px;
+    right: 30px;
+    width: 360px;
+    padding: 8px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    background: rgba(12,16,25,0.98);
+    box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+}
+
+.nq-navbar-search a {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 13px;
+    color: #909bae;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 11px;
+}
+
+.nq-navbar-search a:hover {
+    background: rgba(255,255,255,0.05);
+    color: #e2e7f1;
+}
+
+.nq-navbar-search a span:nth-child(2) {
+    flex: 1;
+}
+
+@media (max-width: 750px) {
+    .nq-navbar {
+        height: 62px;
+        padding: 0 16px;
+        gap: 20px;
+    }
+
+    .nq-nav {
+        gap: 15px;
+    }
+
+    .nq-nav a {
+        font-size: 10px;
+    }
+
+    .nq-nav a:nth-child(1) {
+        display: none;
+    }
+
+    .nq-navbar-search {
+        top: 57px;
+        right: 12px;
+        width: calc(100% - 24px);
+    }
+}
+
+@media (max-width: 500px) {
+    .nq-navbar {
+        gap: 12px;
+    }
+
+    .nq-logo {
+        font-size: 17px;
+    }
+
+    .nq-nav {
+        gap: 11px;
+    }
+
+    .nq-nav a {
+        font-size: 9px;
+    }
+
+    .nq-nav a:nth-child(4) {
+        display: none;
+    }
+
+    .nq-login-button {
+        display: none;
+    }
+}
+
+/* --- NAVBAR LINK SIZE & SPACING --- */
+
+.nq-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nq-nav a {
+    padding: 10px 17px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    border-radius: 10px;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.nq-nav a:hover {
+    background: rgba(111, 156, 255, 0.08);
+}
+
+.nq-nav a.active {
+    background: rgba(111, 156, 255, 0.12);
+}
+
+.nq-logo {
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+.nq-nav-actions {
+    gap: 12px;
+}
+
+.nq-search-button {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+}
+
+.nq-login-button,
+.nq-profile-button {
+    min-width: 78px;
+    padding: 10px 16px;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .nq-nav {
+        gap: 4px;
+    }
+
+    .nq-nav a {
+        padding: 9px 11px;
+        font-size: 14px;
+    }
+}
+/* --- CENTER NAVIGATION --- */
+
+.nq-navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nq-logo {
+    flex: 0 0 auto;
+}
+
+.nq-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.nq-nav a {
+    padding: 8px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.nq-nav-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+@media (max-width: 800px) {
+    .nq-nav {
+        position: static;
+        transform: none;
+        margin-left: 10px;
+    }
+
+    .nq-nav a {
+        padding: 7px 9px;
+        font-size: 13px;
+    }
+}
+/* --- LARGER & WIDER CENTER NAV --- */
+
+.nq-nav {
+    gap: 8px;
+}
+
+.nq-nav a {
+    padding: 10px 19px;
+    font-size: 17px;
+    font-weight: 650;
+    letter-spacing: 0.25px;
+    min-width: 82px;
+    text-align: center;
+}
+
+.nq-nav a:nth-child(3) {
+    min-width: 110px;
+}
+
+.nq-nav a:nth-child(4) {
+    min-width: 85px;
+}
+
+@media (max-width: 900px) {
+    .nq-nav {
+        gap: 4px;
+    }
+
+    .nq-nav a {
+        padding: 8px 12px;
+        min-width: auto;
+        font-size: 15px;
+    }
+}
+/* --- SEARCH + LOGIN BALANCE --- */
+
+.nq-nav-actions {
+    margin-left: auto;
+    margin-right: 18px;
+    gap: 12px;
+}
+
+.nq-search-button {
+    width: 46px;
+    height: 46px;
+    font-size: 24px;
+    border-radius: 11px;
+}
+
+.nq-login-button,
+.nq-profile-button {
+    min-width: 88px;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .nq-nav-actions {
+        margin-right: 8px;
+        gap: 7px;
+    }
+
+    .nq-search-button {
+        width: 42px;
+        height: 42px;
+        font-size: 21px;
+    }
+
+    .nq-login-button,
+    .nq-profile-button {
+        min-width: 74px;
+        padding: 8px 13px;
+        font-size: 14px;
+    }
+}
+
+/* THEME-AWARE LOGO */
+
+html[data-nextinqueue-theme] .nq-logo {
+    color: var(--nq-text) !important;
+}
+
+html[data-nextinqueue-theme] .nq-logo span {
+    color: var(--nq-accent) !important;
+}
