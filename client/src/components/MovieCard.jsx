@@ -1,7 +1,7 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const API_BASE = "http://localhost:8080/api";
+const API_BASE = "${VITE_API_URL}/api";
 
 function getMediaType(type) {
     if (type === "series" || type === "tv") return "series";
@@ -140,7 +140,7 @@ export default function MovieCard({ movie, type = "movie" }) {
                         />
                     ) : (
                         <div className="movie-card-no-poster">
-                            <span>🎬</span>
+                            <span>??</span>
                             <p>No Poster</p>
                         </div>
                     )}
@@ -177,7 +177,7 @@ export default function MovieCard({ movie, type = "movie" }) {
                             )
                         }
                     >
-                        ♥
+                        ?
                     </button>
 
                     <button
@@ -190,7 +190,7 @@ export default function MovieCard({ movie, type = "movie" }) {
                             )
                         }
                     >
-                        ✓
+                        ?
                     </button>
 
                 </div>
@@ -223,3 +223,4 @@ export default function MovieCard({ movie, type = "movie" }) {
         </article>
     );
 }
+

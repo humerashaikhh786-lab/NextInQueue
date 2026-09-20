@@ -1,4 +1,4 @@
-﻿import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import "./Navbar.css";
 
@@ -56,7 +56,7 @@ export default function Navbar() {
                     onClick={openHomeSearch}
                     aria-label="Search"
                 >
-                    ⌕
+                    ?
                 </button>
 
                 {user ? (
@@ -80,3 +80,4 @@ export default function Navbar() {
         </header>
     );
 }
+

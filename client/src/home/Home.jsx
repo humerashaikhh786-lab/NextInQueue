@@ -1,10 +1,10 @@
-const LIBRARY_API = "http://localhost:8080/api/library/toggle";
+const LIBRARY_API = "${VITE_API_URL}/api/library/toggle";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 import GenreCards from "./GenreCards";
 
-const API_BASE = "http://localhost:8080/api/tmdb";
+const API_BASE = "${VITE_API_URL}/api/tmdb";
 const TMDB_IMAGE = "https://image.tmdb.org/t/p";
 
 function normalizeItems(data) {
@@ -1052,4 +1052,5 @@ export default function Home() {
         </main>
     );
 }
+
 

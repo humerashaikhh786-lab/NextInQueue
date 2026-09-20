@@ -13,7 +13,7 @@ function WatchNow() {
         async function loadRegions() {
             try {
                 const response = await fetch(
-                    "http://localhost:8080/api/tmdb/regions"
+                    "${VITE_API_URL}/api/tmdb/regions"
                 );
 
                 if (!response.ok) {
@@ -55,8 +55,8 @@ function WatchNow() {
         async function loadTitle() {
             try {
                 const endpoint = type === "series"
-                    ? `http://localhost:8080/api/tmdb/tv/${id}`
-                    : `http://localhost:8080/api/tmdb/movie/${id}`;
+                    ? `${VITE_API_URL}/api/tmdb/tv/${id}`
+                    : `${VITE_API_URL}/api/tmdb/movie/${id}`;
 
                 const response = await fetch(endpoint);
 
@@ -90,8 +90,8 @@ function WatchNow() {
 
             const endpoint =
                 type === "series"
-                    ? `http://localhost:8080/api/tmdb/tv/${id}/watch-providers?region=${selectedRegion}`
-                    : `http://localhost:8080/api/tmdb/movie/${id}/watch-providers?region=${selectedRegion}`;
+                    ? `${VITE_API_URL}/api/tmdb/tv/${id}/watch-providers?region=${selectedRegion}`
+                    : `${VITE_API_URL}/api/tmdb/movie/${id}/watch-providers?region=${selectedRegion}`;
 
             const response = await fetch(endpoint);
 
@@ -620,6 +620,7 @@ function ProviderGroup({
     );
 }
 export default WatchNow;
+
 
 
 

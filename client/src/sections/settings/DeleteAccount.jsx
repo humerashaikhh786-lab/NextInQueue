@@ -1,9 +1,9 @@
-﻿import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { useState } from "react";
 import "./DeleteAccount.css";
 
-const API_URL = "http://localhost:8080/api/users";
+const API_URL = "${VITE_API_URL}/api/users";
 
 function DeleteAccount() {
 
@@ -197,7 +197,7 @@ function DeleteAccount() {
                 className="delete-account-back-button"
                 onClick={() => navigate(-1)}
             >
-                <span>←</span>
+                <span>?</span>
                 Back
             </button>
 
@@ -385,6 +385,7 @@ function DeleteAccount() {
 }
 
 export default DeleteAccount;
+
 
 
 

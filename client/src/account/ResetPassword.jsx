@@ -1,7 +1,7 @@
-﻿import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { useState } from "react";
 
-const API_URL = "http://localhost:8080/api/users";
+const API_URL = "${VITE_API_URL}/api/users";
 
 function ResetPassword() {
 
@@ -109,7 +109,7 @@ function ResetPassword() {
                 className="back-button"
                 onClick={() => navigate(-1)}
             >
-                ← Back
+                ? Back
             </button>
 
             <section className="account-card">
@@ -219,3 +219,4 @@ function ResetPassword() {
 }
 
 export default ResetPassword;
+

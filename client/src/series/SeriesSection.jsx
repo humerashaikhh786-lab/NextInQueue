@@ -1,8 +1,8 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./MediaSection.css";
 
-const API_BASE = "http://localhost:8080/api/tmdb";
+const API_BASE = "${VITE_API_URL}/api/tmdb";
 const TMDB_IMAGE = "https://image.tmdb.org/t/p/w500";
 
 export default function SeriesSection() {
@@ -162,3 +162,4 @@ export default function SeriesSection() {
         </section>
     );
 }
+

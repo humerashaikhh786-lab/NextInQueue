@@ -1,8 +1,8 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import "./SearchSection.css";
 
-const API = "http://localhost:8080/api/tmdb";
+const API = "${VITE_API_URL}/api/tmdb";
 const IMAGE_BASE = "https://image.tmdb.org/t/p";
 
 function getTitle(item) {
@@ -42,16 +42,16 @@ function PosterCard({ item }) {
                     />
                 ) : (
                     <div className="search-no-poster">
-                        <span>🎬</span>
+                        <span>??</span>
                     </div>
                 )}
 
                 <div className="search-poster-overlay">
-                    <span>▶</span>
+                    <span>?</span>
                 </div>
 
                 <div className="search-card-rating">
-                    ⭐{" "}
+                    ?{" "}
                     {item.vote_average
                         ? item.vote_average.toFixed(1)
                         : "N/A"}
@@ -62,7 +62,7 @@ function PosterCard({ item }) {
                 <h3>{getTitle(item)}</h3>
                 <p>
                     {getType(item)}
-                    {getYear(item) ? ` • ${getYear(item)}` : ""}
+                    {getYear(item) ? ` � ${getYear(item)}` : ""}
                 </p>
             </div>
         </Link>
@@ -233,7 +233,7 @@ export default function SearchSection() {
                     className="search-back-button"
                     onClick={() => window.history.back()}
                 >
-                    ← Back
+                    ? Back
                 </button>
             </div>
 
@@ -254,7 +254,7 @@ export default function SearchSection() {
                         onSubmit={handleSubmit}
                     >
                         <span className="search-large-icon">
-                            ⌕
+                            ?
                         </span>
 
                         <input
@@ -296,13 +296,13 @@ export default function SearchSection() {
                         </div>
                     ) : error ? (
                         <div className="search-empty">
-                            <div>⚠️</div>
+                            <div>??</div>
                             <h2>Something went wrong</h2>
                             <p>{error}</p>
                         </div>
                     ) : results.length === 0 ? (
                         <div className="search-empty">
-                            <div>🔎</div>
+                            <div>??</div>
                             <h2>No results found</h2>
                             <p>
                                 Try a different movie, series or
@@ -345,3 +345,4 @@ export default function SearchSection() {
         </main>
     );
 }
+

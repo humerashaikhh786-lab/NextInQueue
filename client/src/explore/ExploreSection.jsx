@@ -1,9 +1,9 @@
-const LIBRARY_API = "http://localhost:8080/api/library/toggle";
+const LIBRARY_API = "${VITE_API_URL}/api/library/toggle";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./ExploreSection.css";
 
-const API_BASE = "http://localhost:8080/api/tmdb";
+const API_BASE = "${VITE_API_URL}/api/tmdb";
 
 const GENRES = [
     { id: 28, name: "Action" },
@@ -646,4 +646,5 @@ export default function ExploreSection() {
         </main>
     );
 }
+
 

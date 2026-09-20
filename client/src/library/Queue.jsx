@@ -1,4 +1,4 @@
-﻿import LibraryList from "./LibraryList";
+import LibraryList from "./LibraryList";
 
 function Queue() {
     return (
@@ -14,3 +14,4 @@ function Queue() {
 }
 
 export default Queue;
+

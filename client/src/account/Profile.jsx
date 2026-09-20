@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import "../library/Library.css";
 
-const API_BASE = "http://localhost:8080";
+const API_BASE = "${VITE_API_URL}";
 
 function Profile() {
     const navigate = useNavigate();
@@ -274,6 +274,7 @@ function Profile() {
 }
 
 export default Profile;
+
 
 
 

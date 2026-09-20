@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:8080/api/users";
+const API_URL = "${VITE_API_URL}/api/users";
 
 function CreateAccount() {
 
@@ -258,3 +258,4 @@ function CreateAccount() {
 }
 
 export default CreateAccount;
+

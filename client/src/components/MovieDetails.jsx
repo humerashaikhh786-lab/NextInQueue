@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
 import "./MovieDetails.css";
 
-const API_BASE = "http://localhost:8080";
+const API_BASE = "${VITE_API_URL}";
 const TMDB_IMAGE = "https://image.tmdb.org/t/p/";
 
 function MovieDetails() {
@@ -755,5 +755,6 @@ function MovieDetails() {
 }
 
 export default MovieDetails;
+
 
 

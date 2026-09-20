@@ -1,7 +1,7 @@
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { useState } from "react";
 
-const API_URL = "http://localhost:8080/api/users";
+const API_URL = "${VITE_API_URL}/api/users";
 
 function VerifyOTP() {
 
@@ -191,3 +191,4 @@ function VerifyOTP() {
 }
 
 export default VerifyOTP;
+

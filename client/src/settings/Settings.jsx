@@ -1,4 +1,4 @@
-﻿import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Settings.css";
 
 function Settings() {
@@ -11,7 +11,7 @@ function Settings() {
                 className="settings-back-button"
                 onClick={() => navigate(-1)}
             >
-                <span>←</span>
+                <span>?</span>
                 Back
             </button>
 
@@ -37,17 +37,17 @@ function Settings() {
                     </div>
 
                     <a href="#appearance" className="settings-sidebar-link active">
-                        <span>◐</span>
+                        <span>?</span>
                         Appearance
                     </a>
 
                     <a href="#account" className="settings-sidebar-link">
-                        <span>♙</span>
+                        <span>?</span>
                         Account
                     </a>
 
                     <a href="#security" className="settings-sidebar-link">
-                        <span>◆</span>
+                        <span>?</span>
                         Security
                     </a>
                 </aside>
@@ -69,7 +69,7 @@ function Settings() {
 
                         <div className="settings-feature-card">
                             <div className="settings-feature-icon theme-icon">
-                                ◐
+                                ?
                             </div>
 
                             <div className="settings-card-info">
@@ -95,7 +95,7 @@ function Settings() {
                                 className="settings-action-button"
                             >
                                 Manage Theme
-                                <span>→</span>
+                                <span>?</span>
                             </Link>
                         </div>
                     </section>
@@ -115,7 +115,7 @@ function Settings() {
 
                         <div className="settings-feature-card">
                             <div className="settings-feature-icon profile-icon">
-                                ♙
+                                ?
                             </div>
 
                             <div className="settings-card-info">
@@ -136,7 +136,7 @@ function Settings() {
                                 className="settings-action-button"
                             >
                                 View Profile
-                                <span>→</span>
+                                <span>?</span>
                             </Link>
                         </div>
                     </section>
@@ -156,7 +156,7 @@ function Settings() {
 
                         <div className="settings-feature-card">
                             <div className="settings-feature-icon security-icon">
-                                ◆
+                                ?
                             </div>
 
                             <div className="settings-card-info">
@@ -177,13 +177,13 @@ function Settings() {
                                 className="settings-action-button"
                             >
                                 Change Password
-                                <span>→</span>
+                                <span>?</span>
                             </Link>
                         </div>
                     </section>
 
                     <div className="settings-footer-note">
-                        <span>✦</span>
+                        <span>?</span>
                         More personalization options will be added to
                         NextInQueue over time.
                     </div>
@@ -195,3 +195,4 @@ function Settings() {
 }
 
 export default Settings;
+

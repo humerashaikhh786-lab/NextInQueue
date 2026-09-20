@@ -1,4 +1,4 @@
-﻿import "./GenreCards.css";
+import "./GenreCards.css";
 
 export default function GenreCards({ onSelect }) {
     return (
@@ -133,3 +133,4 @@ const GENRE_CARDS = [
         description: "Keep you guessing"
     }
 ];
+

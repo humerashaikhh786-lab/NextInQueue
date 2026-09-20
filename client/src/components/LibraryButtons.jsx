@@ -1,6 +1,6 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 
-const API = "http://localhost:8080/api/library/toggle";
+const API = "${VITE_API_URL}/api/library/toggle";
 
 export default function LibraryButtons({ item }) {
     const [message, setMessage] = useState("");
@@ -53,7 +53,7 @@ export default function LibraryButtons({ item }) {
 
             setMessage(
                 data.active
-                    ? "✓ Added to " + names[itemType]
+                    ? "? Added to " + names[itemType]
                     : "Removed from " + names[itemType]
             );
         } catch (error) {
@@ -115,7 +115,7 @@ export default function LibraryButtons({ item }) {
                         zIndex: 100000
                     }}
                 >
-                    ♥
+                    ?
                 </button>
 
                 <button
@@ -134,7 +134,7 @@ export default function LibraryButtons({ item }) {
                         zIndex: 100000
                     }}
                 >
-                    ✓
+                    ?
                 </button>
             </div>
 
@@ -161,3 +161,4 @@ export default function LibraryButtons({ item }) {
         </>
     );
 }
+
