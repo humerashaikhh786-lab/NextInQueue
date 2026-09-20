@@ -880,7 +880,6 @@
     cursor: pointer;
     transition:
         transform 0.25s ease,
-    gap: 0;
         background 0.25s ease;
 }
 
