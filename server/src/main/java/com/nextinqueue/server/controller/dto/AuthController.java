@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins = {"http://localhost:5173", "http://127.0.0.1:5173", "https://nextinqueue-1.onrender.com"})
+
 public class AuthController {
 
     private final AuthService authService;
