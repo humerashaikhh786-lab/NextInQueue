@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import "./GenreSection.css";
 
-const API_BASE = "${VITE_API_URL}/api/tmdb";
+const API_BASE = import.meta.env.VITE_API_URL + "/api/tmdb";
 
 const GENRE_DESCRIPTIONS = {
     Action: "High-energy adventures, intense battles and unforgettable heroes.",
@@ -15,7 +15,7 @@ const GENRE_DESCRIPTIONS = {
     Horror: "Dark stories, terrifying moments and mysteries from beyond the ordinary.",
     Mystery: "Uncover secrets, follow the clues and find the truth.",
     Romance: "Love stories, relationships and unforgettable connections.",
-    "Science Fiction": "Beyond reality — futuristic worlds, technology and the unknown.",
+    "Science Fiction": "Beyond reality â€” futuristic worlds, technology and the unknown.",
     Thriller: "Suspense, danger and stories that keep you guessing."
 };
 
@@ -29,7 +29,7 @@ function getDate(item) {
 
 function getYear(item) {
     const date = getDate(item);
-    return date ? date.substring(0, 4) : "—";
+    return date ? date.substring(0, 4) : "â€”";
 }
 
 function getType(item) {
@@ -82,7 +82,7 @@ function GenreCard({ item }) {
 
                 <div className="genre-result-meta">
                     <span>{getYear(item)}</span>
-                    <span>•</span>
+                    <span>â€¢</span>
                     <span>{getType(item)}</span>
                 </div>
             </div>

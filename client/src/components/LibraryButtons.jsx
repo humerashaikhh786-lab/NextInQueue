@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const API = "${VITE_API_URL}/api/library/toggle";
+const API = import.meta.env.VITE_API_URL + "/api/library/toggle";
 
 export default function LibraryButtons({ item }) {
     const [message, setMessage] = useState("");

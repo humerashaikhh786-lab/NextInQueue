@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Library.css";
 
-const API_BASE = "${VITE_API_URL}";
+const API_BASE = import.meta.env.VITE_API_URL;
 
 function LibraryList({
     type,

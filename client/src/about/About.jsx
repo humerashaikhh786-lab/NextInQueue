@@ -10,7 +10,7 @@ function About() {
                 className="back-button"
                 onClick={() => navigate(-1)}
             >
-                ← Back
+                â† Back
             </button>
 
             <header className="page-header">
@@ -71,7 +71,7 @@ function About() {
             <section className="about-section">
                 <h2>Version</h2>
 
-                <p>NextInQueue — Initial Development Version</p>
+                <p>NextInQueue â€” Initial Development Version</p>
             </section>
         </main>
     );

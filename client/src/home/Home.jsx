@@ -1,10 +1,10 @@
-const LIBRARY_API = "${VITE_API_URL}/api/library/toggle";
+const LIBRARY_API = import.meta.env.VITE_API_URL + "/api/library/toggle";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 import GenreCards from "./GenreCards";
 
-const API_BASE = "${VITE_API_URL}/api/tmdb";
+const API_BASE = import.meta.env.VITE_API_URL + "/api/tmdb";
 const TMDB_IMAGE = "https://image.tmdb.org/t/p";
 
 function normalizeItems(data) {
@@ -108,14 +108,14 @@ function MovieCard({ item, index }) {
 
                 {item?.vote_average > 0 && (
                     <span className="home-rating">
-                        <span>★</span>
+                        <span>â˜…</span>
                         {Number(item.vote_average).toFixed(1)}
                     </span>
                 )}
 
                 <div className="home-card-hover">
                     <div className="home-card-play">
-                        ▶
+                        â–¶
                     </div>
                 </div>
             </div>
@@ -125,9 +125,9 @@ function MovieCard({ item, index }) {
 
                 <div className="home-card-meta">
                     <span>
-                        {date ? date.substring(0, 4) : "—"}
+                        {date ? date.substring(0, 4) : "â€”"}
                     </span>
-                    <i>•</i>
+                    <i>â€¢</i>
                     <span>
                         {item?.media_type === "tv"
                             ? "TV"
@@ -344,7 +344,7 @@ function SearchHistory({ onSelect }) {
                             onClick={() => onSelect(query)}
                         >
                             <span className="home-search-history-icon">
-                                ↗
+                                â†—
                             </span>
 
                             <span className="home-search-history-query">
@@ -363,7 +363,7 @@ function SearchHistory({ onSelect }) {
                                 )
                             }
                         >
-                            ×
+                            Ã—
                         </button>
                     </div>
                 ))}
@@ -766,7 +766,7 @@ export default function Home() {
                             <div className="home-hero-meta">
 
                                 <span className="home-rating">
-                                    <span>★</span>
+                                    <span>â˜…</span>
                                     {heroItem.vote_average
                                         ? Number(
                                               heroItem.vote_average
@@ -932,7 +932,7 @@ export default function Home() {
                         <div className="home-search-top">
 
                             <div className="home-search-input-wrap">
-                                <span>⌕</span>
+                                <span>âŒ•</span>
 
                                 <input
                                     id="home-search-input"
@@ -966,7 +966,7 @@ export default function Home() {
                                 onClick={clearSearchInput}
                                 aria-label="Clear search"
                             >
-                                ×
+                                Ã—
                             </button>
 
                         </div>
@@ -996,18 +996,18 @@ export default function Home() {
                                                         "tv"
                                                             ? "TV Series"
                                                             : "Movie"}
-                                                        {" • "}
+                                                        {" â€¢ "}
                                                         {getDate(item)
                                                             ? getDate(item).substring(
                                                                   0,
                                                                   4
                                                               )
-                                                            : "—"}
+                                                            : "â€”"}
                                                     </p>
                                                 </div>
 
                                                 <span className="home-search-result-arrow">
-                                                    →
+                                                    â†’
                                                 </span>
                                             </button>
                                         )
@@ -1032,7 +1032,7 @@ export default function Home() {
                                     </span>
 
                                     <span>
-                                        →
+                                        â†’
                                     </span>
                                 </button>
 

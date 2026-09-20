@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import "./SearchSection.css";
 
-const API = "${VITE_API_URL}/api/tmdb";
+const API = import.meta.env.VITE_API_URL + "/api/tmdb";
 const IMAGE_BASE = "https://image.tmdb.org/t/p";
 
 function getTitle(item) {
@@ -62,7 +62,7 @@ function PosterCard({ item }) {
                 <h3>{getTitle(item)}</h3>
                 <p>
                     {getType(item)}
-                    {getYear(item) ? ` • ${getYear(item)}` : ""}
+                    {getYear(item) ? ` â€¢ ${getYear(item)}` : ""}
                 </p>
             </div>
         </Link>

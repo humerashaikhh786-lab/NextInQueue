@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const API_BASE = "${VITE_API_URL}/api";
+const API_BASE = import.meta.env.VITE_API_URL + "/api";
 
 function getMediaType(type) {
     if (type === "series" || type === "tv") return "series";

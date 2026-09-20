@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./ActorProfile.css";
 
-const API_BASE = "${VITE_API_URL}/api/tmdb";
+const API_BASE = import.meta.env.VITE_API_URL + "/api/tmdb";
 const TMDB_IMAGE = "https://image.tmdb.org/t/p/";
 
 export default function ActorProfile() {
@@ -120,7 +120,7 @@ export default function ActorProfile() {
 
     function getYear(item) {
         const date = item.release_date || item.first_air_date;
-        return date ? date.substring(0, 4) : "—";
+        return date ? date.substring(0, 4) : "â€”";
     }
 
     function getCharacter(item) {

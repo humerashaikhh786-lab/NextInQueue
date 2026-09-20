@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-const API_URL = "${VITE_API_URL}/api/users";
+const API_URL = import.meta.env.VITE_API_URL + "/api/users";
 
 function ForgotPassword() {
 

@@ -13,7 +13,7 @@ function WatchNow() {
         async function loadRegions() {
             try {
                 const response = await fetch(
-                    "${VITE_API_URL}/api/tmdb/regions"
+                    import.meta.env.VITE_API_URL + "/api/tmdb/regions"
                 );
 
                 if (!response.ok) {
@@ -55,8 +55,8 @@ function WatchNow() {
         async function loadTitle() {
             try {
                 const endpoint = type === "series"
-                    ? `${VITE_API_URL}/api/tmdb/tv/${id}`
-                    : `${VITE_API_URL}/api/tmdb/movie/${id}`;
+                    ? `${import.meta.env.VITE_API_URL}/api/tmdb/tv/${id}`
+                    : `${import.meta.env.VITE_API_URL}/api/tmdb/movie/${id}`;
 
                 const response = await fetch(endpoint);
 
@@ -90,8 +90,8 @@ function WatchNow() {
 
             const endpoint =
                 type === "series"
-                    ? `${VITE_API_URL}/api/tmdb/tv/${id}/watch-providers?region=${selectedRegion}`
-                    : `${VITE_API_URL}/api/tmdb/movie/${id}/watch-providers?region=${selectedRegion}`;
+                    ? `${import.meta.env.VITE_API_URL}/api/tmdb/tv/${id}/watch-providers?region=${selectedRegion}`
+                    : `${import.meta.env.VITE_API_URL}/api/tmdb/movie/${id}/watch-providers?region=${selectedRegion}`;
 
             const response = await fetch(endpoint);
 
@@ -390,7 +390,7 @@ function WatchNow() {
                                             <ProviderGroup
                                                 title="Stream"
                                                 subtitle="Included with a subscription"
-                                                icon={"▶"}
+                                                icon={"Ã¢â€“Â¶"}
                                                 providers={includedProviders}
                                                 tmdbLink={providerGroups?.link}
                                             />
@@ -402,7 +402,7 @@ function WatchNow() {
                                             <ProviderGroup
                                                 title="Free"
                                                 subtitle="Watch for free or with ads"
-                                                icon={"▶"}
+                                                icon={"Ã¢â€“Â¶"}
                                                 providers={freeProviders}
                                                 mediaTitle={title}
                                                 tmdbLink={providerGroups?.link}

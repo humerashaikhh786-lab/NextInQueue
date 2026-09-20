@@ -3,7 +3,7 @@ import { useAuth } from "../../context/AuthContext";
 import { useState } from "react";
 import "./DeleteAccount.css";
 
-const API_URL = "${VITE_API_URL}/api/users";
+const API_URL = import.meta.env.VITE_API_URL + "/api/users";
 
 function DeleteAccount() {
 
