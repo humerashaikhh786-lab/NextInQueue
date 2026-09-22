@@ -120,7 +120,7 @@ export default function ActorProfile() {
 
     function getYear(item) {
         const date = item.release_date || item.first_air_date;
-        return date ? date.substring(0, 4) : "â€”";
+        return date ? date.substring(0, 4) : "\u2014";
     }
 
     function getCharacter(item) {

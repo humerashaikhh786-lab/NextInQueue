@@ -390,7 +390,7 @@ function WatchNow() {
                                             <ProviderGroup
                                                 title="Stream"
                                                 subtitle="Included with a subscription"
-                                                icon={"Ã¢â€“Â¶"}
+                                                icon={"▶"}
                                                 providers={includedProviders}
                                                 tmdbLink={providerGroups?.link}
                                             />
@@ -402,7 +402,7 @@ function WatchNow() {
                                             <ProviderGroup
                                                 title="Free"
                                                 subtitle="Watch for free or with ads"
-                                                icon={"Ã¢â€“Â¶"}
+                                                icon={"▶"}
                                                 providers={freeProviders}
                                                 mediaTitle={title}
                                                 tmdbLink={providerGroups?.link}

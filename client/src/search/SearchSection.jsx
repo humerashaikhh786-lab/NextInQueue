@@ -47,11 +47,11 @@ function PosterCard({ item }) {
                 )}
 
                 <div className="search-poster-overlay">
-                    <span>?</span>
+                    {"\u25B6"}
                 </div>
 
                 <div className="search-card-rating">
-                    ?{" "}
+                    {"\u2605"}{" "}
                     {item.vote_average
                         ? item.vote_average.toFixed(1)
                         : "N/A"}
@@ -62,8 +62,8 @@ function PosterCard({ item }) {
                 <h3>{getTitle(item)}</h3>
                 <p>
                     {getType(item)}
-                    {getYear(item) ? ` â€¢ ${getYear(item)}` : ""}
-                </p>
+                    {getYear(item) ? ` • ${getYear(item)}` : ""}
+                    {getYear(item) ? ` \u2022 ${getYear(item)}` : ""}
             </div>
         </Link>
     );

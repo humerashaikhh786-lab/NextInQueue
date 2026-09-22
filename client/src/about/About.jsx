@@ -71,7 +71,7 @@ function About() {
             <section className="about-section">
                 <h2>Version</h2>
 
-                <p>NextInQueue â€” Initial Development Version</p>
+                <p>NextInQueue {"\u2014"} Initial Development Version</p>
             </section>
         </main>
     );

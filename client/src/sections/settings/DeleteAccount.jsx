@@ -197,7 +197,7 @@ function DeleteAccount() {
                 className="delete-account-back-button"
                 onClick={() => navigate(-1)}
             >
-                <span>?</span>
+                <span>{"\u2190"}</span>
                 Back
             </button>
 

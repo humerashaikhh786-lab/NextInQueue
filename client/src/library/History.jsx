@@ -11,7 +11,7 @@ function History() {
                 className="library-back-button"
                 onClick={() => navigate(-1)}
             >
-                <span>?</span>
+                <span>←</span>
                 Back
             </button>
 
@@ -34,7 +34,7 @@ function History() {
                 </div>
 
                 <div className="library-empty-state">
-                    <div className="library-empty-icon history-empty">?</div>
+                    <div className="library-empty-icon history-empty">←</div>
                     <h3>Your history is empty</h3>
                     <p>
                         Content you explore will appear here so you can
@@ -46,7 +46,7 @@ function History() {
                         className="library-empty-button"
                     >
                         Start Exploring
-                        <span>?</span>
+                        <span>→</span>
                     </button>
                 </div>
             </section>

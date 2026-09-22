@@ -108,14 +108,14 @@ function MovieCard({ item, index }) {
 
                 {item?.vote_average > 0 && (
                     <span className="home-rating">
-                        <span>â˜…</span>
+                        <span>★</span>
                         {Number(item.vote_average).toFixed(1)}
                     </span>
                 )}
 
                 <div className="home-card-hover">
                     <div className="home-card-play">
-                        â–¶
+                        ▶
                     </div>
                 </div>
             </div>
@@ -125,9 +125,9 @@ function MovieCard({ item, index }) {
 
                 <div className="home-card-meta">
                     <span>
-                        {date ? date.substring(0, 4) : "â€”"}
+                        {date ? date.substring(0, 4) : "—"}
                     </span>
-                    <i>â€¢</i>
+                    <i>•</i>
                     <span>
                         {item?.media_type === "tv"
                             ? "TV"
@@ -363,7 +363,7 @@ function SearchHistory({ onSelect }) {
                                 )
                             }
                         >
-                            Ã—
+                            ×
                         </button>
                     </div>
                 ))}
@@ -766,7 +766,7 @@ export default function Home() {
                             <div className="home-hero-meta">
 
                                 <span className="home-rating">
-                                    <span>â˜…</span>
+                                    <span>★</span>
                                     {heroItem.vote_average
                                         ? Number(
                                               heroItem.vote_average
@@ -966,7 +966,7 @@ export default function Home() {
                                 onClick={clearSearchInput}
                                 aria-label="Clear search"
                             >
-                                Ã—
+                                ×
                             </button>
 
                         </div>
@@ -996,13 +996,13 @@ export default function Home() {
                                                         "tv"
                                                             ? "TV Series"
                                                             : "Movie"}
-                                                        {" â€¢ "}
+                                                        {" • "}
                                                         {getDate(item)
                                                             ? getDate(item).substring(
                                                                   0,
                                                                   4
                                                               )
-                                                            : "â€”"}
+                                                            : "—"}
                                                     </p>
                                                 </div>
 

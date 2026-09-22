@@ -15,7 +15,7 @@ const GENRE_DESCRIPTIONS = {
     Horror: "Dark stories, terrifying moments and mysteries from beyond the ordinary.",
     Mystery: "Uncover secrets, follow the clues and find the truth.",
     Romance: "Love stories, relationships and unforgettable connections.",
-    "Science Fiction": "Beyond reality â€” futuristic worlds, technology and the unknown.",
+    "Science Fiction": "Beyond reality \u2014 futuristic worlds, technology and the unknown.",
     Thriller: "Suspense, danger and stories that keep you guessing."
 };
 
@@ -29,7 +29,7 @@ function getDate(item) {
 
 function getYear(item) {
     const date = getDate(item);
-    return date ? date.substring(0, 4) : "â€”";
+    return date ? date.substring(0, 4) : "\u2014";
 }
 
 function getType(item) {
@@ -73,7 +73,7 @@ function GenreCard({ item }) {
                 </span>
 
                 <div className="genre-result-overlay">
-                    <span className="genre-play">?</span>
+                    <span className="genre-play">▶</span>
                 </div>
             </div>
 
@@ -82,7 +82,7 @@ function GenreCard({ item }) {
 
                 <div className="genre-result-meta">
                     <span>{getYear(item)}</span>
-                    <span>â€¢</span>
+                    <span>•</span>
                     <span>{getType(item)}</span>
                 </div>
             </div>

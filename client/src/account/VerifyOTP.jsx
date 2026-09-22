@@ -93,7 +93,7 @@ function VerifyOTP() {
                 className="back-button"
                 onClick={() => navigate(-1)}
             >
-                â† Back
+                {"\u2190"} Back
             </button>
 
             <section className="account-card">

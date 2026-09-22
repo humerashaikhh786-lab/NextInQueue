@@ -56,7 +56,7 @@ export default function Navbar() {
                     onClick={openHomeSearch}
                     aria-label="Search"
                 >
-                    ?
+                    {"\uD83D\uDD0D"}
                 </button>
 
                 {user ? (
