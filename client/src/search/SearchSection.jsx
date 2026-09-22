@@ -63,7 +63,7 @@ function PosterCard({ item }) {
                 <p>
                     {getType(item)}
                     {getYear(item) ? ` • ${getYear(item)}` : ""}
-                    {getYear(item) ? ` \u2022 ${getYear(item)}` : ""}
+                </p>
             </div>
         </Link>
     );
